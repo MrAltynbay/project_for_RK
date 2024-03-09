@@ -7,7 +7,6 @@ from api.views.currency import CurrencyViewSet
 
 app_name = "api"
 router = DefaultRouter()
-# router.register("auth", AuthViewSet, basename="auth")
 router.register("currencies", CurrencyViewSet, basename="currencies")
 
 urlpatterns = router.urls
