@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "project-for-rk"
+version = "0.1.0"
+description = ""
+authors = ["Salavat"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "^5.0.3"
+django-rest-framework = "^0.1.0"
+psycopg2-binary = "^2.9.9"
+drf-yasg = "^1.21.7"
+requests = "^2.31.0"
+djangorestframework-simplejwt = "^5.3.1"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.2"
+pytest-django = "^4.8.0"
+pytest-factoryboy = "^2.7.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

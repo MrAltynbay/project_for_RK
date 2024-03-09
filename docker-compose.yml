@@ -1,0 +1,22 @@
+version: '3.3'
+
+services:
+  db:
+    image: postgres:15.2
+    restart: on-failure
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=project_for_RK
+      - POSTGRES_PASSWORD=project_for_RK
+      - POSTGRES_DB=project_for_RK
+    healthcheck:
+      test: pg_isready -U project_for_RK -d project_for_RK
+      interval: 30s
+      timeout: 3s
+      retries: 3
+
+volumes:
+  postgres_data:

@@ -1,0 +1,6 @@
+.idea
+.vscode
+.python-version
+.env.local
+.env.dev
+__pycache__
