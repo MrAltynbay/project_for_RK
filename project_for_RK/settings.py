@@ -144,5 +144,3 @@ REST_FRAMEWORK = {
 # Swagger config
 DRF_AUTH_TOKEN = {"DRF auth token": {"type": "apiKey", "name": "Authorization", "in": "header"}}
 SWAGGER_SETTINGS = {"SECURITY_DEFINITIONS": {**DRF_AUTH_TOKEN}}
-
-# AUTH_USER_MODEL = "core.User"
