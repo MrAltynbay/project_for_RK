@@ -8,11 +8,10 @@ from tests.factories.user import UserFactory
 
 
 @pytest.mark.django_db
-@pytest.mark.parametrize(
-    "currency_count",
-    [1, 2, 3, 4, 5]
-)
-def test__get_currency_list__success_case(currency_count, api_client: APIClient) -> None:
+@pytest.mark.parametrize("currency_count", [1, 2, 3, 4, 5])
+def test__get_currency_list__success_case(
+    currency_count, api_client: APIClient
+) -> None:
     user = UserFactory.create()
 
     currencies = CurrencyFactory.create_batch(currency_count)
@@ -30,4 +29,3 @@ def test__get_currency_list__without_auth(api_client: APIClient) -> None:
     r = api_client.get(reverse("api:currencies-list"))
 
     assert r.status_code == status.HTTP_401_UNAUTHORIZED
-

@@ -18,7 +18,7 @@ pip install poetry
  
 ### Install the project dependencies
 ```shell
-cd project_for_RK && poetry install
+poetry install
 ```
 
 ### Spawn a shell within the virtual environment
@@ -30,11 +30,6 @@ poetry shell
 ```shell
 python manage.py runserver
 ```
-
-### Import env 
-```shell
-export $(grep -v "^#" .env.local | xargs)
-``` 
 
 ### Run tests
 ```shell
@@ -48,7 +43,7 @@ pytest
 docker-compose up -d --build
 
 pip install poetry
-cd project_for_RK && poetry install
+poetry install
 poetry shell
 
 python manage.py runserver
@@ -60,7 +55,7 @@ python manage.py runserver
 2. After sign_up or sign_in use the token from the response body and place it in the Authorize form with the pattern 
 
 ```
-Token {your_token}
+Bearer {your_token}
 ```
 
 3. Use swagger

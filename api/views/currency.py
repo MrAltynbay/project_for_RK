@@ -8,7 +8,9 @@ from core.models import Currency
 
 class CurrencyViewSet(viewsets.ViewSet):
 
-    permission_classes = [IsAuthenticated, ]
+    permission_classes = [
+        IsAuthenticated,
+    ]
 
     def list(self, request):
         currencies = Currency.objects.all()
@@ -22,6 +24,6 @@ class CurrencyViewSet(viewsets.ViewSet):
             serializer = CurrencySerializer(currency)
             result = Response(serializer.data)
         except Currency.DoesNotExist:
-            result = Response({'error': 'Currency not found'}, status=404)
+            result = Response({"error": "Currency not found"}, status=404)
 
         return result

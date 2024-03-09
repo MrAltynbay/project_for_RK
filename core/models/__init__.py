@@ -1,4 +1,3 @@
-__all__ = ('Currency',)
+__all__ = ("Currency",)
 
 from core.models.currency import Currency
-
