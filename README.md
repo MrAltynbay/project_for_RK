@@ -59,4 +59,9 @@ Bearer {your_token}
 ```
 
 3. Use swagger
+   
+### You can use managy.py command for create or update currencies
+```shell
+python manage.py update_currency
+```
 
